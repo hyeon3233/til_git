@@ -149,7 +149,7 @@ git commit
 
 #### 4.5.3. 커밋 내용
 
-- Enter 키를 기준으로 제목과 내용을 구분.
+- Enter 키를 기준으로 제목과 내용을 구분합니다.
 
 ```
 [docs] : 커밋 제목
@@ -222,7 +222,7 @@ git branch -v
 #### 4.7.4. 브랜치 합치기
 
 - 브랜치를 하나로 합쳐주기
-- 주의 사항 : `main 브랜치에서 test 브랜치 합친다.`
+- 주의 사항 : `main 브랜치에서 test 브랜치 합쳐줄 겁니다.`
 
 ```bash
 git add .
@@ -235,73 +235,76 @@ git merge 합쳐주고자하는 브랜치명
 
 ### 4.8. 깃 브랜치 충돌 해결해 보기
 
-- 깃 브랜치를 merge 하면 많이 발생
-- login 브랜치에서 로그인 기능을 구현
+- 추후 GitHub 협업에서 상세히 알아보자.
 
 # GitHub
 
 ## 1. GitHub 회원가입하기
 
--
+- https://github.com
 
 ## 2. GitHub 프로젝트(Repository) 생성하기
 
-- 만약 til_git 프로젝트 생성했다면 Github 에도 동일하게 생성
+- 만약 til_git 프로젝트 생성해다면 GitHub 에도 동일하게 생성하자.
 - public 으로 셋팅 : 외부로 소스 공개
-- description 은 작성 : 프로젝트 성명
+- description 은 작성해 주자 : 프로젝트 설명
 
 ## 3. GitHub 인증하기
 
-### 3.1. 무조건 GitHub에 로그인 된 상태로 시도해야함
+### 3.1. 무조건 GitHub 에 로그인 된 상태로 시도하셔야 합니다.
 
-### 3.2. `윈도우 > 자격 증명 관리자 > Windows 자격 증명`에서 github 확인
+### 3.2. `윈도우 > 자격 증명 관리자 > Windows 자격 증명 ` 에서 gitHub 확인
 
-- 새로 생성하시길 권장
-- PC 정리 또는 자리 이동시 반드시 삭제
+- 새로 생성하시길 권장합니다.
+- PC 정리 또는 자리 이동시 반드시 삭제하셔야 합니다.
 
 ## 4. GitHub 프로젝트 연결하기
 
 ### 4.1. 원격 저장소 주소 지정하기
 
-- `remote`는 원격(인터넷)을 말한다
-- `add`는 추가하라
+- `remote` : 원격(인터넷) 을 말합니다.
+- `add` : 추가하라
 - `origin`
-  - http 주소를 간략하게 별칭을 준 것
-  - 단어는 마음대로 해도 된다.
-  - `원격 이름`을 말함
+  - http 주소를 간략하게 별칭을 준 것입니다.
+  - 단어는 마음대로 하셔도 되요.
+  - `원격 이름`을 말함.
 
 ```bash
-git remote add origin https://github.com/hyeon3233/til_git.git
+git remote add origin https://github.com/아이디/til_git.git
 ```
 
 ### 4.2. 원격 저장소 목록 보기
 
+```bash
+git remote -v
+```
+
 ### 4.3. 원격 저장소에 소스 등록하기
 
-- 습관적으로 하면 좋은 작업 ( ctrl + S, 즉 저장 후 )
+- 습관적으로 하셨으면 좋은 작업 (Ctrl + S, 즉, 저장 후)
 
 ```bash
 git add .
 git commit -m "[docs]:최초등록"
 ```
 
-- 소스 업로드를 `push 한다`라고 함.
+- 소스 업로드를 `push 한다`라고 합니다.
 
 ```bash
 git push -u origin main
 ```
 
--`-u` 옵션을 붙였다면 이후로는 `git push` 하면 됨.
+- `-u` 옵션을 붙이셨다면 이후로는 `git push` 하면 됨.
 
 ### 4.4. 원격 저장소 관리하기
 
-- 목록보기
+- 목록 보기
 
 ```bash
 git remote -v
 ```
 
-- 삭제하기
+- 삭제 하기
 
 ```bash
 git remote remove 원격이름
@@ -313,7 +316,7 @@ git remote remove 원격이름
 git remote add 원격이름 https주소
 ```
 
-- 이름 바꾸기
+- 이름바꾸기
 
 ```bash
 git remote rename 옛이름 새이름
@@ -322,7 +325,13 @@ git remote rename 옛이름 새이름
 ### 4.5. 추천 작업 순서
 
 ```bash
-git add .
-git commit -m “[docs]:깃학습”
-git push origin main
+ git add .
+ git commit -m "[docs]:깃학습"
+ git push origin main
 ```
+
+## 5. 깃허브의 소스를 다운로드 받아서 작업하는 법
+
+- 깃허브 주소를 주의하셔야 합니다.
+- 코드 소스 기준은 `https` 로 진행 중입니다.
+- 코드 소스 기준이 `ssh` 면 인증을 다시 처리하는 과정 필요.
